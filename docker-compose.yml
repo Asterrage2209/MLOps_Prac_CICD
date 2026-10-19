@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  dbapp:
+    image: cicd3dbapp
+    container_name: cicd3dbapp
+    build:
+      context: ./dbapp
+    ports:
+      - "8001:8001"
+    networks:
+      - cicd3appnet
+  webapp:
+    image: cicd3webapp
+    container_name: cicd3webapp
+    build:
+      context: ./webapp
+    ports:
+      - "8000:8000"
+    networks:
+      - cicd3appnet
+networks:
+  cicd3appnet:
