@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Checkout Code'){
             steps{
-                git branch: 'master', url: 'https://github.com/Asterrage2209/MLOps_Prac_CICD.git'
+                git branch: 'main', url: 'https://github.com/Asterrage2209/MLOps_Prac_CICD.git'
             }
         }
         stage('Show Workspace'){
